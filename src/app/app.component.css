@@ -1,0 +1,77 @@
+.outer {  
+    display: grid;
+    grid-template-columns: 2.5fr 10.5fr 2.5fr;
+    grid-template-rows: 1.1fr 0.9fr 1.1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . ."
+      ". main ."
+      ". . .";   
+}
+  
+.main {  
+    opacity: 0.9;
+    display: grid;
+    grid-template-columns: 1.4fr 1.4fr 0.4fr 1.4fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "amount source swap target"
+      "result . . convert";
+    grid-area: main;
+    border-radius: 10px;  
+}
+
+h2{
+  margin: 0;
+}
+
+.containerr, .amount, .source, .swap, .target, .result, .convert{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.amount { 
+    grid-area: amount;
+}
+  
+.source {
+    padding-top: 5%;
+    grid-area: source;
+}
+  
+.swap {  
+    grid-area: swap;
+}
+  
+.target { 
+    padding-top: 5%;
+    grid-area: target;
+}
+  
+.result { 
+    grid-area: result;
+}
+  
+.convert { 
+    grid-area: convert;
+}
+.btn-light{
+  border: 1px solid #bfbfbf;
+  border-radius: 50%;
+}
+html, body , .outer {
+    height: 100%;
+    margin: 0;
+}
+   
+.outer * {
+    position: relative;
+}
+  
+
+  
+  
